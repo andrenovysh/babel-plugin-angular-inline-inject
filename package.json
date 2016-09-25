@@ -1,0 +1,19 @@
+{
+  "name": "babel-plugin-angular-inline-inject",
+  "version": "1.0.0",
+  "description": "inlines inject from constructor params",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src ./src -d ./",
+    "test": "mocha test --timeout 5000000"
+  },
+  "author": "andre.novysh",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "mocha": "^2.3.2"
+  }
+}
