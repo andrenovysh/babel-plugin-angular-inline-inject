@@ -1,4 +1,4 @@
 class TestClass {
-	constructor(dependency) {
-	}
+  constructor(dependency) {
+  }
 }

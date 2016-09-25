@@ -17,10 +17,10 @@ exports.default = function (_ref) {
 					var expression = _ref2.expression;
 					return expression.name === 'inlineInject';
 				})) {
-					var classBody = path.node.body;
+					var classBody = path.node.body.body;
 
 
-					var ctor = classBody.body.find(function (_ref3) {
+					var ctor = classBody.find(function (_ref3) {
 						var kind = _ref3.kind;
 						return kind === 'constructor';
 					});

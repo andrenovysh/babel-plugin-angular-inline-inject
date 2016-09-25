@@ -8,12 +8,13 @@ function test(name) {
     var fixturePath = path.resolve(__dirname, name, 'fixture.js');
     var expectedPath = path.resolve(__dirname, name, 'expected.js');
 
-    var lineBreak = /[\r\n]/g;
-    var tab = /\t+/g;
+    var carriedgeReturn = /[\r]/g;
 
-    var actual = babel.transformFileSync(fixturePath, { plugins: ['../../index.js'] }).code.replace(lineBreak, '').replace(tab, ' ');
-    var expected = fs.readFileSync(expectedPath, { encoding: 'utf8' }).replace(lineBreak, '').replace(tab, ' ');
-    
+    var actual = babel.transformFileSync(fixturePath, { plugins: ['../../index.js'] })
+      .code.replace(carriedgeReturn, '');
+    var expected = fs.readFileSync(expectedPath, { encoding: 'utf8' })
+      .replace(carriedgeReturn, '');
+
     assert.equal(actual, expected);
   });
 }

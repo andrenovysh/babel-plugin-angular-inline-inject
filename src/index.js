@@ -5,9 +5,9 @@ export default ({ types: t }) => {
 				const { decorators } = path.node;
 
 				if (decorators && decorators.find(({ expression }) => expression.name === 'inlineInject')) {
-					const { body: classBody } = path.node;
+					const { body: { body: classBody } } = path.node;
 
-					const ctor = classBody.body.find(({ kind }) => kind === 'constructor');
+					const ctor = classBody.find(({ kind }) => kind === 'constructor');
 
 					if(ctor && ctor.params.length) {
 						const injectedDependencies = ctor.params.map(x => t.stringLiteral(x.name));

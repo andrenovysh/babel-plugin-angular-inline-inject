@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src ./src -d ./",
-    "test": "mocha test --timeout 5000000"
+    "test": "mocha test --timeout 50000"
   },
   "author": "andre.novysh",
   "license": "MIT",
